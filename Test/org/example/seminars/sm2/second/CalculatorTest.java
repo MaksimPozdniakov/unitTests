@@ -1,5 +1,6 @@
+package org.example.seminars.sm2.second;
 
-import org.example.seminars.sm2.second.Calculator;
+import org.example.seminars.sm3.figure.FigureCalculate;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -163,4 +164,14 @@ public class CalculatorTest {
         System.setIn(inputStream);
         System.setOut(null);
     }
+
+    @Test
+    void circleLength() {
+        FigureCalculate figureCalculate = new FigureCalculate();
+
+        double res = figureCalculate.calculate(20);
+
+        assertEquals(62.83185307179586, res);
+    }
+
 }
